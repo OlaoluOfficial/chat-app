@@ -41,6 +41,15 @@ The focus was solely on the web due to time constraints.
 3. Start the client:
     ```bash
     npm start
+
+    - For Web: (Recommended)
+      npm run web
+
+    - For ios:
+      npm  run ios
+
+    - For Android
+      npm run android
     ```
 
 ## Features

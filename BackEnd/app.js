@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const http = require('http');
-const socketIo = require('socket.io');
+// const socketIo = require('socket.io');
 const mongoose = require('mongoose');
 const Message = require('./models/Message');
 const User = require('./models/User');
@@ -11,7 +11,8 @@ const cors = require('cors')
 const app = express();
 
 const server = http.createServer(app);
-const io = socketIo(server);
+
+const io = require('socket.io')(server, {cors: {origin: "*"}});
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
